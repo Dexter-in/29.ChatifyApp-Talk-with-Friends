@@ -42,9 +42,13 @@ export const signup = async (req,res) => {
 
    if(newUser) {
 
-    generateToken(newUser._id,res)
-    await newUser.save()
+    // generateToken(newUser._id,res)
+    // await newUser.save()
 
+
+    const savedUser = await newUser .save();
+    generateToken(savedUser._id,res);
+    
     res.status(200).json({
       _id:newUser._id,
       fullName:newUser.fullName,
@@ -52,7 +56,7 @@ export const signup = async (req,res) => {
       profilePic:newUser.profilePic
     });
 
-    // toda: send a welcome email to the user
+    // toda: send a welcome email to
 
    }else{
 
