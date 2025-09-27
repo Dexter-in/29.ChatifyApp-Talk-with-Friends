@@ -1,12 +1,12 @@
 import express from "express";
 // Imports the Express library, which is used to create web servers in Node.js.
 
+import { signup } from "../controllers/auth.controller.js";    
+
 
 const router = express.Router();
 
-router.get("/signup", (req,res) => {
-    res.send({message: "Signup endpoint"});
-});
+router.post("/signup",signup);
 // This code sets up a route handler in your Express app.
 router.get("/login", (req,res) => {
     res.send({message: "login endpoint"});
