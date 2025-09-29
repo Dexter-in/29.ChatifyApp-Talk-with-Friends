@@ -4,7 +4,7 @@
 
 import express from "express";
 // Imports the Express library, which is used to create web servers in Node.js.
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 // Imports the dotenv library, which is used to load environment variables from a .env file into process.env.
 
 import path from "path";
@@ -46,7 +46,7 @@ if(ENV.NODE_ENV === "production"){
     });
 }
 
-app.listen (ENV.PORT, () => {
+app.listen (PORT, () => {
     console.log("server running on port:" + PORT)
     connectDB()
 });
