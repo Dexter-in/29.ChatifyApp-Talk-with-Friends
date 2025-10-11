@@ -5,16 +5,15 @@ import cloudinary from "../lib/cloudinary.js";
 export const getAllContacts = async (req, res) => {
   try {
     const loggedInUserId = req.user._id;
-    const filtterdUsers = await User.find({
-      _id: { $ne: loggedInUserId },
-    }).select("-password");
+    const filteredUsers = await User.find({ _id: { $ne: loggedInUserId } }).select("-password");
 
-    res.status(200).json(filtterdUsers);
+    res.status(200).json(filteredUsers);
   } catch (error) {
-    console.log("Error in GetAllContacts", error);
-    res.status(500).json({ message: "server error" });
+    console.log("Error in getAllContacts:", error);
+    res.status(500).json({ message: "Server error" });
   }
 };
+
 
 export const getMessagesByUserId = async (req, res) => {
   try {
