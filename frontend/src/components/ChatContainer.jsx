@@ -15,6 +15,7 @@ function ChatContainer() {
     
   } = useChatStore();
   const { authUser } = useAuthStore();
+  const messageEndRef =useRef(null)
 
  useEffect(() => { 
 
@@ -32,11 +33,11 @@ function ChatContainer() {
   //   return () => unsubscribeFromMessages();
   // }, [selectedUser, getMessagesByUserId, subscribeToMessages, unsubscribeFromMessages]);
 
-  // useEffect(() => {
-  //   if (messageEndRef.current) {
-  //     messageEndRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [messages]);
+  useEffect(() => {
+    if (messageEndRef.current) {
+      messageEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
 
   return (
     <>
@@ -71,7 +72,7 @@ function ChatContainer() {
                 </div>
               </div>
             ))}
-           
+           <div ref={messageEndRef} />
           </div>
        
         ) : isMessagesLoading ? <MessagesLoadingSkeleton keleton /> :(
