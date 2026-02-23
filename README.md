@@ -1,22 +1,20 @@
 <h1 align="center">✨ Full-Stack Chat App with Auth & Emails ✨</h1>
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+
 
 Highlights:
 
-- 🔐 Custom JWT Authentication (no 3rd-party auth)
-- ⚡ Real-time Messaging via Socket.io
-- 🟢 Online/Offline Presence Indicators
-- 🔔 Notification & Typing Sounds (with toggle)
-- 📨 Welcome Emails on Signup (Resend)
-- 🗂️ Image Uploads (Cloudinary)
-- 🧰 REST API with Node.js & Express
-- 🧱 MongoDB for Data Persistence
-- 🚦 API Rate-Limiting powered by Arcjet
-- 🎨 Beautiful UI with React, Tailwind CSS & DaisyUI
-- 🧠 Zustand for State Management
-- 🧑‍💻 Git & GitHub Workflow (branches, PRs, merges)
-- 🚀 Easy Deployment (free-tier friendly with Sevalla)
+🔐 Custom Auth: Secure JWT implementation without external providers.
+⚡ Live Chat: Seamless real-time messaging powered by Socket.io.
+🟢 Presence: Instant online/offline status tracking.
+🔔 UX Details: Notification sounds and typing indicators with user controls.
+📨 Email Integration: Automatic welcome emails via Resend.
+🗂️ Cloud Media: Effortless image handling with Cloudinary.
+🧰 Robust Backend: Node.js, Express, and MongoDB architecture.
+🚦 Security: Built-in API rate-limiting using Arcjet.
+🎨 Modern UI: Styled with React, Tailwind CSS, and DaisyUI.
+🧠 State Logic: Clean, global state management using Zustand.
+🧑‍💻 Dev Ops: Professional Git workflow and Sevalla deployment. 
 
 ---
 
